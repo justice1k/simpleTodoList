@@ -1,0 +1,117 @@
+/** @format */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: monospace;
+}
+
+body {
+  background-color: rgb(114, 131, 125);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#add-task-container {
+  width: 350px;
+  background: aliceblue;
+  padding: 20px 10px;
+  /* border-radius: 10px; */
+  box-shadow: 0 0 10px;
+  margin-bottom: 10px;
+  display: flex;
+}
+
+input {
+  flex: 5;
+  margin-right: 10px;
+  font-size: 1.5rem;
+  padding: 5px;
+  box-shadow: 0 0 3px;
+  /* border-radius: 10px; */
+}
+
+#add-task {
+  transition: 0.1s;
+  font-size: 1.2rem;
+  padding: 5px;
+  flex: 1;
+  background-color: aliceblue;
+  /* border-radius: 10px; */
+  cursor: pointer;
+  border: 5px solid black;
+}
+#add-task:hover {
+  background-color: greenyellow;
+}
+#add-task:active {
+  background-color: aliceblue;
+  border: 1px solid black;
+}
+
+/* Styling for added tasks */
+
+.task {
+  width: 100%;
+  background-color: aliceblue;
+  box-shadow: 0 0 10px;
+  padding: 5px;
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.task li {
+  list-style: none;
+  font-size: 1.5rem;
+  flex: 4;
+  padding: 5px;
+  margin: 10px;
+}
+.task button {
+  flex: 1;
+  cursor: pointer;
+  margin: 2px;
+  box-shadow: 0 0 2px;
+}
+.task .deleteTask {
+  font-size: 3rem;
+  /* background-color: rgb(255, 29, 29); */
+  margin: 0;
+  padding: 0;
+  margin-left: 5px;
+  border: 5px solid black;
+}
+.task .checkTask {
+  font-size: 2rem;
+  /* background-color: rgb(17, 188, 17); */
+  margin: 0;
+  padding: 0;
+  margin-right: 5px;
+  border: 5px solid black;
+}
+
+.task .deleteTask:hover {
+  background-color: rgb(255, 29, 29);
+  transition: 0.2s;
+
+  font-size: 3rem;
+}
+.task .checkTask:hover {
+  transition: 0.2s;
+  background-color: rgb(17, 188, 17);
+}
+.task .checkTask:active {
+  background-color: aliceblue;
+  border: 1px;
+  transition: 0.2s;
+}
+
+.task .deleteTask:active {
+  background-color: aliceblue;
+  border: 1px;
+  transition: 0.2s;
+}

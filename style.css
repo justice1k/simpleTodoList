@@ -19,7 +19,6 @@ body {
   width: 350px;
   background: aliceblue;
   padding: 20px 10px;
-  /* border-radius: 10px; */
   box-shadow: 0 0 10px;
   margin-bottom: 10px;
   display: flex;
@@ -31,7 +30,6 @@ input {
   font-size: 1.5rem;
   padding: 5px;
   box-shadow: 0 0 3px;
-  /* border-radius: 10px; */
 }
 
 #add-task {
@@ -75,11 +73,9 @@ input {
   flex: 1;
   cursor: pointer;
   margin: 2px;
-  box-shadow: 0 0 2px;
 }
 .task .deleteTask {
   font-size: 3rem;
-  /* background-color: rgb(255, 29, 29); */
   margin: 0;
   padding: 0;
   margin-left: 5px;
@@ -87,7 +83,6 @@ input {
 }
 .task .checkTask {
   font-size: 2rem;
-  /* background-color: rgb(17, 188, 17); */
   margin: 0;
   padding: 0;
   margin-right: 5px;

@@ -13,7 +13,9 @@ addTask.addEventListener('click', function () {
     task.classList.add('task');
 
     li = document.createElement('li');
-    li.innerText = `${inputTask.value}`;
+    span = document.createElement('span');
+    span.innerHTML = `${inputTask.value}`;
+    li.appendChild(span);
     task.appendChild(li);
 
 
@@ -43,6 +45,7 @@ addTask.addEventListener('click', function () {
     checkButton.addEventListener('click', function () {
         checkButton.parentElement.style.backgroundColor = "rgb(17, 188, 17)";
         checkButton.style.backgroundColor = "rgb(17, 188, 17)";
+        checkButton.parentElement.querySelector('li').style.textDecoration = "line-through"
     });
 
     // Delete Button Event

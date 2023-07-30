@@ -3,9 +3,13 @@
 const addTask = document.getElementById('add-task');
 const taskContainer = document.getElementById('task-container');
 const inputTask = document.getElementById('input-task');
+const form = document.querySelector(".form");
+
 
 // Events
-
+    form.addEventListener("submit", function (e){
+        e.preventDefault()
+    }
 // addTask Event
 
 addTask.addEventListener('click', function () {

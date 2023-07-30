@@ -23,11 +23,13 @@ form.addEventListener('submit', function (e) {
 
 
     let checkButton = document.createElement('button');
+    checkButton.removeAttribute("type");
     checkButton.innerHTML = ' ✔ ';
     checkButton.classList.add('checkTask');
     task.appendChild(checkButton)
 
     let deleteButton = document.createElement('button');
+    deleteButton.removeAttribute("type");
     deleteButton.innerHTML = ' 🗑 ' ;
     deleteButton.classList.add('deleteTask');
     task.appendChild(deleteButton);

@@ -47,7 +47,8 @@ form.addEventListener('submit', function (e) {
     };
 
     // Check button Event
-    checkButton.addEventListener('click', function () {
+    checkButton.addEventListener('click', function (e) {
+        e.preventDefault()
         checkButton.parentElement.style.backgroundColor = "rgb(17, 188, 17)";
         checkButton.style.backgroundColor = "rgb(17, 188, 17)";
         checkButton.parentElement.querySelector('li').style.textDecoration = "line-through"

@@ -7,12 +7,11 @@ const form = document.querySelector(".form");
 
 
 // Events
-    form.addEventListener("submit", function (e){
-        e.preventDefault()
-    }
+
 // addTask Event
 
-addTask.addEventListener('click', function () {
+form.addEventListener('submit', function (e) {
+    e.preventDefault()
     let task = document.createElement('div');
     task.classList.add('task');
 

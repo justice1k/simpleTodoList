@@ -21,11 +21,13 @@ const inputTask = document.getElementById('input-task');
         }  
         
         document.addEventListener('click', function (e) {
+            e.preventDefault();
             let target = e.target
             if (target.classList == 'checkTask') {
+                console.log(target.parentElement)
                 target.parentElement.style.backgroundColor = "rgb(17, 188, 17)";
                 target.style.backgroundColor = "rgb(17, 188, 17)";
-                target.parentElement.querySelector('li').style.textDecoration = "line-through"                
+                target.parentElement.querySelector('li').style.textDecoration = "line-through";                
                 
             } else if (target.classList == 'deleteTask') {
                 localStorage.removeItem(target.parentElement.getAttribute('id'))
@@ -41,7 +43,9 @@ const inputTask = document.getElementById('input-task');
 
 // addTask Event
 
-addTask.addEventListener('click', function () {
+addTask.addEventListener('click', function (e) {
+    e.preventDefault()
+
     let task = document.createElement('div');
     task.setAttribute('id', localStorage.length);
     task.classList.add('task');
@@ -60,7 +64,7 @@ addTask.addEventListener('click', function () {
     task.appendChild(checkButton)
 
     let deleteButton = document.createElement('button');
-    deleteButton.innerHTML = ' 🗑 ' ;
+    deleteButton.innerHTML = ' 🗑 ';
     deleteButton.classList.add('deleteTask');
     task.appendChild(deleteButton);
 
@@ -79,4 +83,4 @@ addTask.addEventListener('click', function () {
     };
 
 
-})
+});

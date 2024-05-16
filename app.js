@@ -3,8 +3,6 @@
 const addTask = document.getElementById('add-task');
 const taskContainer = document.getElementById('task-container');
 const inputTask = document.getElementById('input-task');
-const form = document.querySelector(".form");
-
 
 
 
@@ -43,8 +41,7 @@ const form = document.querySelector(".form");
 
 // addTask Event
 
-form.addEventListener('submit', function (e) {
-    e.preventDefault()
+addTask.addEventListener('click', function () {
     let task = document.createElement('div');
     task.setAttribute('id', localStorage.length);
     task.classList.add('task');
@@ -58,13 +55,11 @@ form.addEventListener('submit', function (e) {
     task.appendChild(li);
 
     let checkButton = document.createElement('button');
-    checkButton.removeAttribute("type");
     checkButton.innerHTML = ' ✔ ';
     checkButton.classList.add('checkTask');
     task.appendChild(checkButton)
 
     let deleteButton = document.createElement('button');
-    deleteButton.removeAttribute("type");
     deleteButton.innerHTML = ' 🗑 ' ;
     deleteButton.classList.add('deleteTask');
     task.appendChild(deleteButton);
